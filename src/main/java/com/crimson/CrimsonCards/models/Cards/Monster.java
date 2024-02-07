@@ -8,5 +8,4 @@ public class Monster extends Card {
     public int health;
     public int attack;
     public Faction faction;
-    public String imgUrl;
 }

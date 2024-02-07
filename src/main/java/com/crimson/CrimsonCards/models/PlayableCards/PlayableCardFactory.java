@@ -8,13 +8,14 @@ import com.crimson.CrimsonCards.models.Cards.Spell;
 import java.util.ArrayList;
 
 public class PlayableCardFactory {
-    private static PlayableCard createPlayableCard(Card card) {
+    //Needs testing
+    public static PlayableCard createPlayableCard(Card card) {
         if (card instanceof Monster) {
-            return new PlayableMonsterCard(card);
+            return new PlayableMonsterCard((Monster)card);
         } else if (card instanceof Spell) {
-            return new PlayableSpellCard(card);
+            return new PlayableSpellCard((Spell)card);
         } else if (card instanceof Equipment) {
-            return new PlayableEquipmentCard(card);
+            return new PlayableEquipmentCard((Equipment)card);
         } else {
             throw new IllegalArgumentException("Unsupported card type");
         }
